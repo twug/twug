@@ -1,5 +1,14 @@
 <?php
 
+/**
+ * Here be dragons!
+ *
+ * TEMPORARY stubs/shims for PHP features required by Twig
+ *
+ * NOTE: These shims are temporary, and must all be implemented properly in Uniter
+ *       and removed from here before a stable release can be tagged!
+ */
+
 function truncate($string, $maxLength = 20)
 {
     if (strlen($string) > $maxLength) {
