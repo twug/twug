@@ -6,10 +6,13 @@ Twig PHP (https://twig.symfony.com/) compiled to JavaScript.
 performance to be sub-optimal and the compiled JS bundle size to be rather large for now.
 
 ## How to use it
+
+Install it with NPM:
 ```shell
 npm install twug
 ```
 
+Import it and render some Twig:
 ```javascript
 import twug from 'twug';
 
