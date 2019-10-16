@@ -19,7 +19,7 @@ npm install twug
 
 Require it and render some Twig:
 ```javascript
-let twug = require('twug');
+let twug = require('twug').default;
 
 twug.renderString('Hello there {{ name }}!', {name: 'Fred'}).then((renderedHtml) => {
     document.body.insertAdjacentHTML('beforeEnd', renderedHtml);
