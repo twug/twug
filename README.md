@@ -56,6 +56,28 @@ twug.renderString('Hello there {{ name }}!', {name: 'Fred'}).then((renderedText)
 
 TODO (feel free to [send a PR](https://github.com/twug/twug/pulls) if you're interested)
 
+## Building it locally
+
+Clone the repository
+```shell
+git clone https://github.com/twug/twug
+```
+
+Install PHP dependencies with Composer
+```shell
+composer install
+```
+
+Install JS dependencies with NPM
+```shell
+npm install
+```
+
+Start a development build (note this will be in watch mode)
+```shell
+build:dev:watch
+```
+
 ## Issues
 - An old Twig release (1.x) is being used
 - The deprecated string loader is being used
