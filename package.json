@@ -1,0 +1,41 @@
+{
+  "version": "0.0.1",
+  "name": "twug",
+  "description": "Twug - PHP Twig built for JavaScript with Uniter",
+  "license": "MIT",
+  "browserify": {
+    "transform": [
+      "phpify"
+    ]
+  },
+  "phpify": {
+    "phpToJS": {
+      "include": [
+        "php/src/**/*.php",
+        "vendor/autoload.php",
+        "vendor/composer/**/*.php",
+        "vendor/twig/twig/**/*.php",
+        "!vendor/twig/twig/test/**"
+      ],
+      "mode": "psync"
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^6.4.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "happypack": "^4.0.0",
+    "phpify": "^4.1.0",
+    "source-map-loader": "^0.2.4",
+    "transform-loader": "^0.2.4",
+    "webpack": "^2.7.0"
+  },
+  "main": "dist/twug",
+  "scripts": {
+    "prepublishOnly": "npm run build:release",
+    "build:release": "webpack -p",
+    "build:dev:watch": "webpack --watch --devtool source-map --progress"
+  }
+}
