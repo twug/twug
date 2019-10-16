@@ -1,9 +1,14 @@
 # Twug
 
-Twig PHP (https://twig.symfony.com/) compiled to JavaScript.
+Twig PHP (https://twig.symfony.com/) compiled to JavaScript with [Uniter](http://asmblah.github.io/uniter/).
 
-> Note: This is an experimental release. Expect things to be broken,
+> Note 1: This is an experimental release. Expect things to be broken,
 performance to be sub-optimal and the compiled JS bundle size to be rather large for now.
+
+> Note 2: This is primarily a demonstration of how [Uniter](http://asmblah.github.io/uniter/) is able to handle
+complex projects like Twig. If you want to use Uniter to build the rest of your
+client-side logic, you can skip using Twug.js and just require Twig.php with Composer
+as part of your build.
 
 ## How to use it
 
