@@ -10,16 +10,16 @@ complex projects like Twig. If you want to use Uniter to build the rest of your
 client-side logic, you can skip using Twug.js and just require Twig.php with Composer
 as part of your build.
 
-## How to use it
+## How to use it in the browser
 
 Install it with NPM:
 ```shell
 npm install twug
 ```
 
-Import it and render some Twig:
+Require it and render some Twig:
 ```javascript
-import twug from 'twug';
+let twug = require('twug');
 
 twug.renderString('Hello there {{ name }}!', {name: 'Fred'}).then((renderedHtml) => {
     document.body.insertAdjacentHTML('beforeEnd', renderedHtml);
@@ -27,6 +27,24 @@ twug.renderString('Hello there {{ name }}!', {name: 'Fred'}).then((renderedHtml)
     document.body.insertAdjacentHTML('beforeEnd', 'Twug error: ' + error);
 });
 ```
+
+## How to use it from Node.js
+
+Install it with NPM:
+```shell
+npm install twug
+```
+
+Require it and render some Twig:
+```javascript
+let twug = require('twug').default;
+
+twug.renderString('Hello there {{ name }}!', {name: 'Fred'}).then((renderedText) => {
+    console.log(renderedText);
+}, (error) => {
+    console.log('Twug error: ' + error);
+});
+````
 
 ## Why
 
