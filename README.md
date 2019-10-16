@@ -2,7 +2,7 @@
 
 Twig PHP (https://twig.symfony.com/) compiled to JavaScript with [Uniter](http://asmblah.github.io/uniter/).
 
-> Note 1: This is an experimental release. Expect things to be broken,
+> Note 1: This is an **experimental** release. Expect things to be broken (see [Issues](#Issues) below),
 performance to be sub-optimal and the compiled JS bundle size to be rather large for now.
 
 > Note 2: This is primarily a demonstration of how [Uniter](http://asmblah.github.io/uniter/) is able to handle
@@ -61,6 +61,8 @@ TODO (feel free to [send a PR](https://github.com/twug/twug/pulls) if you're int
 - The deprecated string loader is being used
 - The escape filter is currently broken due to missing `preg_replace_callback(...)`
   support in Uniter
+- A whole bunch of notices are currently printed due to some missing/shimmed PHP functions
+  and constants.
 
 ## Caveats
 - Some features of PHP are not yet implemented by Uniter: there are stubs for these
